@@ -4,57 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Arin Gadre's portfolio showcasing projects, experience, and skills as a Computer Engineering student and software engineer.">
+    <meta name="author" content="Arin Gadre">
+    <meta name="keywords"
+        content="Portfolio, Arin Gadre, Software Engineer, Computer Engineering, Projects, Experience">
     <title>Arin Gadre - Portfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background-color: #333;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-        }
-
-        header h1 {
-            margin: 0;
-        }
-
-        main {
-            margin: 20px;
-            padding: 20px;
-        }
-
-        section {
-            margin-bottom: 40px;
-        }
-
-        section h2 {
-            color: #333;
-            border-bottom: 2px solid #ccc;
-            padding-bottom: 10px;
-        }
-
-        .profile-pic {
-            max-width: 200px;
-            border-radius: 50%;
-            display: block;
-            margin: 20px auto;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        ul li {
-            margin-bottom: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts/main.js" defer></script>
 </head>
+
+
 
 <body>
     <header>
@@ -64,36 +24,52 @@
     <main>
         <section id="about">
             <h2>About Me</h2>
-            <img src="IMG-20241105-WA0001.jpg" alt="Arin Gadre" class="profile-pic">
-            <p>Hello! I’m Arin, a Computer Engineering student at UC Santa Cruz. I am
-                passionate about building impactful software and solving complex problems with innovative solutions.</p>
+            <img src="assets/profile.jpg" alt="Arin Gadre" class="profile-pic">
+            <p>Hello! I’m Arin, a Computer Engineering student at UC Santa Cruz. I am passionate about building
+                impactful software and solving complex problems with innovative solutions.</p>
         </section>
         <section id="experience">
             <h2>Experience</h2>
             <ul>
-                <li><strong>The Difference LLC - Full Stack Intern:</strong> Developed responsive front ends
-                    using React, TypeScript, and Tailwind CSS. Optimized Flutter apps with Riverpod, achieving a 70%
-                    search efficiency improvement, and worked on Laravel migrations for seamless API integrations.</li>
-                <li><strong>Academic Projects:</strong> Built projects like a Dino Game in SystemVerilog and a Klingon
-                    Parser with advanced tree visualization features.</li>
+                <li><strong>The Difference LLC - Full Stack Intern:</strong> Built responsive front ends with React,
+                    TypeScript, and Tailwind CSS. Streamlined Flutter app state management using Riverpod, reducing
+                    search latency by 70%. Enhanced Laravel back-end functionality, ensuring seamless database
+                    migrations and API integrations.</li>
+                <li><strong>Academic Projects:</strong> Developed a Dino Game in SystemVerilog with advanced FSMs,
+                    timers, and ROM implementation for smooth VGA rendering. Designed a Klingon Parser leveraging Lark
+                    to process Klingon grammar and generate structured outputs and tree visualizations.</li>
             </ul>
         </section>
         <section id="projects">
             <h2>Projects</h2>
             <ul>
-                <li><strong>BingeFlix:</strong> A tool for unified streaming platform searches. Created the back end for
-                    fetching movie data and front end for a seamless user experience.</li>
-                <li><strong>Dino Game:</strong> Developed a fully functional game in SystemVerilog with an FPGA
-                    implementation.</li>
-                <li><strong>Klingon Parser:</strong> Parsed Klingon grammar and vocabulary into structured outputs,
-                    including tree visualizations.</li>
+                <li>
+                    <strong>BingeFlix:</strong> A unified streaming platform search tool. I built the back end to
+                    aggregate movie availability from multiple APIs and crafted a user-friendly front end for
+                    streamlined searches.
+                </li>
+                <li>
+                    <strong>Dino Game:</strong> A functional dinosaur runner game implemented in SystemVerilog and
+                    programmed onto an FPGA. It features pixel-perfect graphics rendered through a VGA interface and
+                    uses timers for obstacle spawning and score tracking.
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/A_kBcON_fjk"
+                        title="Dino Game Demo" frameborder="0" allowfullscreen></iframe>
+                </li>
+                <li>
+                    <strong>Image Classification Model:</strong> Leveraged PyTorch to build and train deep learning
+                    models for image classification tasks. Achieved high accuracy by optimizing hyperparameters and
+                    using advanced data augmentation techniques.
+                </li>
+                <li>
+                    <strong>Klingon Parser:</strong> Parsed Klingon grammar and vocabulary into structured outputs using
+                    the Lark library. Added a tree visualization feature to illustrate sentence structures effectively.
+                </li>
             </ul>
         </section>
         <section id="contact">
             <h2>Contact</h2>
             <p>Email: <a href="mailto:aringadre@example.com">aringadre@example.com</a></p>
-            <p>LinkedIn: <a href="linkedin.com/in/arin-gadre/" target="_blank">LinkedIn
-                    Profile</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/arin-gadre/" target="_blank">LinkedIn Profile</a></p>
         </section>
     </main>
 </body>
