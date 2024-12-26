@@ -11,75 +11,190 @@
         content="Portfolio, Arin Gadre, Software Engineer, Computer Engineering, Projects, Experience">
     <title>Arin Gadre - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="scripts/main.js" defer></script>
 </head>
-
-
 
 <body>
     <header>
         <h1>Arin Gadre</h1>
         <p>Full Stack Intern | Computer Engineering Student</p>
+        <div class="social-links">
+            <a href="https://github.com/aringadre76" target="_blank" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/arin-gadre/" target="_blank" title="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="mailto:aringadre@gmail.com" title="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
     </header>
+
     <main>
         <section id="about">
             <h2>About Me</h2>
             <img src="assets/profile.jpg" alt="Arin Gadre" class="profile-pic">
-            <p>Hello! I’m Arin, a Computer Engineering student at UC Santa Cruz. I am passionate about building
-                impactful software and solving complex problems with innovative solutions.</p>
-        </section>
-        <section id="experience">
-            <h2>Experience</h2>
-            <ul>
-                <li><strong>The Difference LLC - Full Stack Intern:</strong> Built responsive front ends with React,
-                    TypeScript, and Tailwind CSS. Streamlined Flutter app state management using Riverpod, reducing
-                    search latency by 70%. Enhanced Laravel back-end functionality, ensuring seamless database
-                    migrations and API integrations.</li>
-                <li><strong>Academic Projects:</strong> Developed a Dino Game in SystemVerilog with advanced FSMs,
-                    timers, and ROM implementation for smooth VGA rendering. Designed a Klingon Parser leveraging Lark
-                    to process Klingon grammar and generate structured outputs and tree visualizations.</li>
-            </ul>
-        </section>
-        <section id="projects">
-            <h2>Projects</h2>
-            <ul>
-                <li>
-                    <strong>BingeFlix:</strong> A unified streaming platform search tool. I built the back end to
-                    aggregate movie availability from multiple APIs and crafted a user-friendly front end for
-                    streamlined searches.
-                </li>
-                <li>
-                    <strong>Dino Game:</strong> A functional dinosaur runner game implemented in SystemVerilog and
-                    programmed onto an FPGA. It features pixel-perfect graphics rendered through a VGA interface and
-                    uses timers for obstacle spawning and score tracking.
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/A_kBcON_fjk"
-                        title="Dino Game Demo" frameborder="0" allowfullscreen></iframe>
-                </li>
-                <li>
-                    <strong>Image Classification Model:</strong> Leveraged PyTorch to build and train deep learning
-                    models for image classification tasks. Achieved high accuracy by optimizing hyperparameters and
-                    using advanced data augmentation techniques.
-                </li>
-                <li>
-                    <strong>Klingon Parser:</strong> Parsed Klingon grammar and vocabulary into structured outputs using
-                    the Lark library. Added a tree visualization feature to illustrate sentence structures effectively.
-                    Below is an example of the Klingon Parser output:
-                    <div style="text-align: center;">
-                        <img src="assets/klingon_parser_example.png" alt="Klingon Parser Example"
-                            style="max-width: 100%; height: auto; border-radius: 8px;">
-                    </div>
-                </li>
-            </ul>
-        </section>
-
-        <section id="contact">
-            <h2>Contact</h2>
-            <div class="social-links">
-                <a href="mailto:aringadre@gmail.com">Email</a>
-                <a href="https://www.linkedin.com/in/arin-gadre/" target="_blank">LinkedIn</a>
-                <a href="https://github.com/aringadre76" target="_blank">GitHub</a>
+            <p>Hello! I'm Arin, a Computer Engineering student at UC Santa Cruz (Expected Graduation: June 2025). I am
+                passionate about building impactful software and
+                solving
+                complex problems with innovative solutions.</p>
+            <div class="education">
+                <h3>Education</h3>
+                <p><strong>University of California, Santa Cruz</strong> | GPA: 3.6</p>
+                <p class="courses"><strong>Relevant Coursework:</strong> Applied ML: Deep Learning, Software
+                    Engineering,
+                    Computer System Design, Computer Networks, Compiler Design, Advanced Programming in C++, Data
+                    Structures
+                    & Algorithms, Logic Design, Natural Language Processing</p>
             </div>
         </section>
+
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Software & Frameworks</h3>
+                    <p>React, Laravel, Flutter, PyTorch, Tensor, Keras, Tailwind, Node.js, Express, MongoDB, Github,
+                        MySQL, Android Studio, Android SDK, NLTK</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <p>Python, Java, C & C++, JavaScript, TypeScript, Dart, PHP, Verilog, SQL</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Development Practices</h3>
+                    <p>SCRUM, Agile, API integration, Unit Testing, Debugging Tools</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>Experience</h2>
+            <div class="experience-item">
+                <h3>The Difference LLC - Full Stack Intern</h3>
+                <p class="date">September 2023 - Present</p>
+                <p class="company-link">
+                    <a href="https://thedifferenceapp.com/" target="_blank">
+                        <i class="fas fa-link"></i> thedifferenceapp.com
+                    </a>
+                </p>
+                <ul>
+                    <li>Developed a dynamic, responsive front-end with modern web technologies, collaborating with
+                        cross-functional teams to ensure a seamless and consistent user experience across platforms.
+                    </li>
+                    <li>Integrated third-party APIs to enhance app functionality, improving user engagement and
+                        satisfaction.</li>
+                    <li>Designed and optimized server-side logic to ensure high performance and reliability, reducing
+                        processing times and enhancing efficiency.</li>
+                    <li>Improved app performance through advanced optimization techniques, streamlining data handling
+                        and
+                        reducing server load, resulting in significant efficiency gains.</li>
+                </ul>
+            </div>
+        </section>
+
+        
+        <!-- Update the projects section for vertical layout -->
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project-container">
+                <div class="project-item">
+                    <h3>Deep Learning Image Classification Model</h3>
+                    <p class="date">Spring 2024</p>
+                    <ul>
+                        <li>Developed an image recognition system using PyTorch and Keras, leveraging pre-trained
+                            models.</li>
+                        <li>Utilized Tensors in PyTorch for efficient data manipulation, boosting classification
+                            performance.
+                        </li>
+                        <li>Implemented transfer learning to reduce training time by 40% while maintaining high
+                            accuracy.</li>
+                        <li>Conducted comprehensive testing and validation to assess and improve model performance.</li>
+                    </ul>
+                </div>
+
+                <div class="project-item">
+                    <h3>BingeFlix: Unified Streaming Search Platform</h3>
+                    <p class="date">Spring 2024</p>
+                    <ul>
+                        <li>Led team as Scrum Master through SCRUM processes, managing sprints and documentation.</li>
+                        <li>Built unified platform using React, Node.js, and MongoDB to aggregate content from multiple
+                            streaming services.</li>
+                        <li>Integrated streaming APIs for real-time availability and ChatGPT API for personalized
+                            recommendations.</li>
+                    </ul>
+                </div>
+
+                <div class="project-item">
+                    <h3>Dino Game</h3>
+                    <p class="date">Fall 2023</p>
+                    <ul>
+                        <li>Designed and implemented a functional dinosaur runner game in SystemVerilog with FSMs,
+                            timers, and
+                            ROM.</li>
+                        <li>Programmed VGA rendering for pixel-perfect graphics on FPGA.</li>
+                        <li>Developed modular game logic for score tracking and dynamic difficulty adjustments.</li>
+                    </ul>
+                    <div class="media-container">
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/A_kBcON_fjk"
+                            title="Dino Game Demo" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <h3>Klingon Parser</h3>
+                    <ul>
+                        <li>Parsed Klingon grammar and vocabulary into structured outputs using the Lark library.</li>
+                        <li>Added tree visualization feature to illustrate sentence structures effectively.</li>
+                    </ul>
+                    <div class="media-container">
+                        <img src="assets/klingon_parser_example.png" alt="Klingon Parser Example" class="project-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="hobbies">
+            <h2>Hobbies & Interests</h2>
+            <div class="hobby-grid">
+                <div class="hobby-item">
+                    <h3><i class="fas fa-cards"></i> Playing Cards</h3>
+                    <div class="hobby-image">
+                        <img src="assets/monarch-cards.jpg" alt="Blue Monarch Playing Cards" class="hobby-img">
+                    </div>
+                    <p>I'm passionate about card magic and collecting playing cards. My favorite deck is the Blue
+                        Monarch
+                        Playing Cards,
+                        famously featured in the "Now You See Me" movies. These cards represent the perfect blend of
+                        elegance
+                        and
+                        performance quality.</p>
+                </div>
+                <div class="hobby-item">
+                    <h3><i class="fas fa-gamepad"></i> Gaming</h3>
+                    <div class="hobby-games">
+                        <div class="game">
+                            <img src="assets/satisfactory-icon.jpg" alt="Satisfactory Game Icon" class="game-icon">
+                            <p><strong>Satisfactory</strong> - A first-person factory building game where I enjoy
+                                creating
+                                complex automated systems and optimizing production lines.</p>
+                        </div>
+                        <div class="game">
+                            <img src="assets/cyberpunk-icon.jpg" alt="Cyberpunk 2077 Icon" class="game-icon">
+                            <p><strong>Cyberpunk 2077</strong> - An open-world RPG where I love exploring the detailed
+                                futuristic world and engaging with its rich narrative.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <footer>
+            <p>View this website's source code on <a href="https://github.com/aringadre76/aringadre76.github.io"
+                    target="_blank">GitHub <i class="fab fa-github"></i></a></p>
+        </footer>
     </main>
 </body>
 
