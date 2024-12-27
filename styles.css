@@ -266,61 +266,6 @@ footer a {
     padding: 5px 0;
 }
 
-/* Updated Project Styles */
-.project-container {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-.project-item {
-    background-color: rgba(255, 255, 255, 0.5);
-    padding: 25px;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-    width: 100%;
-}
-
-.project-item:hover {
-    transform: translateX(10px);
-}
-
-.media-container {
-    margin-top: 20px;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.project-image {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-iframe {
-    width: 100%;
-    border: none;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .hobby-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .project-item {
-        padding: 15px;
-    }
-
-    .media-container {
-        margin-top: 15px;
-    }
-}
-
 /* Company link styles */
 .company-link {
     margin: 10px 0;
@@ -341,13 +286,14 @@ iframe {
     background-color: var(--pastel-pink);
     transform: translateY(-2px);
 }
-
-/* Hobby images styles */
+/* Updated hobby image styles */
 .hobby-image {
-    margin: 15px 0;
+    margin: 15px auto;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 250px;
+    /* Reduced from full width */
 }
 
 .hobby-img {
@@ -361,11 +307,20 @@ iframe {
     transform: scale(1.05);
 }
 
-.hobby-games {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    margin-top: 15px;
+/* Keep the game icons the same size */
+.game-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Media query adjustments */
+@media (max-width: 768px) {
+    .hobby-image {  
+        max-width: 200px;
+        /* Slightly smaller on mobile */
+    }
 }
 
 .game {
@@ -404,6 +359,55 @@ iframe {
     .game-icon {
         width: 80px;
         height: 80px;
+    }
+}
+
+/* Add these styles to your existing CSS */
+
+.project-item ul,
+.experience-item ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.project-item ul ul,
+.experience-item ul ul {
+    padding-left: 20px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+}
+
+.project-item ul li,
+.experience-item ul li {
+    margin-bottom: 12px;
+}
+
+.project-item ul ul li,
+.experience-item ul ul li {
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.project-item ul ul li:before,
+.experience-item ul ul li:before {
+    content: "•";
+    color: var(--pastel-blue);
+    position: absolute;
+    left: -15px;
+    top: 0;
+}
+
+.project-item strong,
+.experience-item strong {
+    color: var(--dark-text);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+
+    .project-item ul ul,
+    .experience-item ul ul {
+        padding-left: 15px;
     }
 }
 
