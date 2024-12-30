@@ -170,6 +170,7 @@ iframe {
 }
 
 .experience-item,
+
 .project-item {
     background-color: rgba(255, 255, 255, 0.5);
     padding: 20px;
@@ -365,6 +366,9 @@ footer a {
 /* Add these styles to your existing CSS */
 
 .project-item ul,
+
+
+
 .experience-item ul {
     list-style: none;
     padding-left: 0;
@@ -410,4 +414,3 @@ footer a {
         padding-left: 15px;
     }
 }
-
