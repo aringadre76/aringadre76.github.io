@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Arin Gadre's portfolio showcasing projects, experience, and skills as a Computer Engineering student and software engineer.">
+    <meta name="author" content="Arin Gadre">
+    <meta name="keywords"
+        content="Portfolio, Arin Gadre, Software Engineer, Computer Engineering, Projects, Experience">
+    <title>Arin Gadre - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="scripts/main.js" defer></script>
+</head>
+
+<body>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Arin Gadre</h1>
+            <div class="typewriter">
+                <span class="typing-text">Full Stack Engineer | ML Researcher | UCSC Student</span>
+            </div>
+            <p class="hero-description">Building innovative solutions at the intersection of ML and Systems</p>
+            <div class="cta-buttons">
+                <a href="#projects" class="cta-primary">View Projects</a>
+                <a href="#contact" class="cta-secondary">Contact Me</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <img src="assets/profile.jpg" alt="Arin Gadre" class="profile-pic">
+            <p>Hello! I'm Arin, a Computer Engineering student at UC Santa Cruz (Expected Graduation: June 2025). I am
+                passionate about building impactful software and
+                solving
+                complex problems with innovative solutions.</p>
+            <div class="education">
+                <h3>Education</h3>
+                <p><strong>University of California, Santa Cruz</strong> | GPA: 3.0</p>
+                <p class="courses"><strong>Relevant Coursework:</strong> Applied ML: Deep Learning, Software
+                    Engineering,
+                    Computer System Design, Computer Networks, Compiler Design, Advanced Programming in C++, Data
+                    Structures
+                    & Algorithms, Logic Design, Natural Language Processing</p>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>Experience</h2>
+            <div class="experience-item">
+                <h3>Research Assistant - LLM Benchmarking Project | Nutanix</h3>
+                <p class="date">January 2025 - June 2025</p>
+                <ul>
+                    <li>Developed an automation framework for benchmarking CPU-accelerated LLM inference</li>
+                    <li>Built metrics collection system using Intel VTune, Linux perf, and PCM</li>
+                    <li>Created Prometheus/Grafana dashboards for real-time performance metrics</li>
+                    <li>Implemented Python-based benchmarking harness for configurable testing</li>
+                    <li>Optimized LLM inference using PyTorch/IPEX and Llama.cpp</li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="experience-item">
+            <h3>The Difference LLC - Full Stack Intern</h3>
+            <p class="date">September 2023 - Present</p>
+            <p class="company-link">
+                <a href="https://thedifferenceapp.com/" target="_blank">
+                    <i class="fas fa-link"></i> thedifferenceapp.com
+                </a>
+            </p>
+            <ul>
+                <li><strong>Front-end Development:</strong>
+                    <ul>
+                        <li>Built responsive front ends with React, TypeScript, and Tailwind CSS</li>
+                        <li>Ensured seamless user experience across all platforms</li>
+                    </ul>
+                </li>
+                <li><strong>Mobile Development:</strong>
+                    <ul>
+                        <li>Streamlined Flutter app state management using Riverpod</li>
+                        <li>Reduced search latency by 70% through optimization</li>
+                    </ul>
+                </li>
+                <li><strong>Back-end Development:</strong>
+                    <ul>
+                        <li>Enhanced Laravel back-end functionality by creating new endpoints</li>
+                        <li>Implemented seamless database migrations and API integrations</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/bingeflix-preview.jpg" alt="BingeFlix Preview">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://bingeflixstreaming.vercel.app/" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i> Live Demo
+                                </a>
+                                <a href="[github-link]" target="_blank">
+                                    <i class="fab fa-github"></i> Source Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>BingeFlix</h3>
+                        <div class="tech-stack">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                            <span>ChatGPT API</span>
+                        </div>
+                        <p>A unified streaming search platform with AI-powered recommendations</p>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <h3>Real-Time Drawing Board</h3>
+                    <p class="date">2024</p>
+                    <ul>
+                        <li><strong>Technology Stack:</strong> React, Node.js, WebSocket</li>
+                        <li>Created a collaborative real-time drawing application with multi-user support</li>
+                        <li>Implemented WebSocket for real-time updates and synchronization</li>
+                        <li>Deployed frontend on Vercel for seamless access</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="https://real-time-drawing-board-front-deploy.vercel.app/" target="_blank">Live Demo</a>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <h3>Dino Run Game</h3>
+                    <p class="date">Fall 2024</p>
+                    <ul>
+                        <li><strong>Technology Stack:</strong> SystemVerilog, FPGA</li>
+                        <li>Designed and implemented a dinosaur runner game using SystemVerilog with FSMs</li>
+                        <li>Programmed VGA rendering for pixel-perfect graphics</li>
+                        <li>Developed modular game logic for score tracking and difficulty adjustments</li>
+                    </ul>
+                    <div class="media-container">
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/A_kBcON_fjk"
+                            title="Dino Game Demo" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Core Technologies</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress">
+                            <span>React/Node.js</span>
+                            <div class="progress" style="width: 90%"></div>
+                        </div>
+                        <div class="skill-progress">
+                            <span>Python/ML</span>
+                            <div class="progress" style="width: 85%"></div>
+                        </div>
+                        <div class="skill-progress">
+                            <span>System Design</span>
+                            <div class="progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="hobbies">
+            <h2>Hobbies & Interests</h2>
+            <div class="hobby-grid">
+                <div class="hobby-item">
+                    <h3><i class="fas fa-cards"></i> Playing Cards</h3>
+                    <div class="hobby-image">
+                        <img src="assets/monarch-cards.jpg" alt="Blue Monarch Playing Cards" class="hobby-img">
+                    </div>
+                    <p>I'm passionate about card magic and collecting playing cards. My favorite deck is the Blue
+                        Monarch
+                        Playing Cards,
+                        famously featured in the "Now You See Me" movies. These cards represent the perfect blend of
+                        elegance
+                        and
+                        performance quality. The embossing on the tuck case is absolutely beautiful!</p>
+                </div>
+
+                <div class="hobby-item">
+                    <h3><i class="fas fa-gamepad"></i> Gaming</h3>
+                    <div class="hobby-games">
+                        <div class="game">
+                            <img src="assets/satisfactory-icon.jpg" alt="Satisfactory Game Icon" class="game-icon">
+                            <p><strong>Satisfactory</strong> - A first-person factory building game where I enjoy
+                                creating
+                                complex automated systems and optimizing production lines. The factory must grow.</p>
+                        </div>
+                        <div class="game">
+                            <img src="assets/cyberpunk-icon.jpg" alt="Cyberpunk 2077 Icon" class="game-icon">
+                            <p><strong>Cyberpunk 2077</strong> - An open-world RPG where I love exploring the detailed
+                                futuristic world and engaging with its rich narrative. "Come on, V. We've got a city to
+                                burn."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>View this website's source code on <a href="https://github.com/aringadre76/aringadre76.github.io"
+                    target="_blank">GitHub <i class="fab fa-github"></i></a></p>
+        </footer>
+    </main>
+</body>
+
+</html>

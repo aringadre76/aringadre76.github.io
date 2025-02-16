@@ -1,0 +1,554 @@
+:root {
+  --cp-yellow: #fcee0a;
+  --cp-pink: #ff2e88;
+  --cp-cyan: #00f0ff;
+  --cp-red: #ff003c;
+  --cp-dark: #0d0d0e;
+  --cp-darker: #070709;
+  --cp-grid: #1a1a1c;
+}
+
+body {
+  background: var(--cp-dark);
+  background-image: 
+    linear-gradient(45deg, var(--cp-grid) 1px, transparent 1px),
+    linear-gradient(-45deg, var(--cp-grid) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: center;
+  color: #fff;
+  position: relative;
+  
+  &::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+      radial-gradient(circle at 50% 50%, 
+        rgba(255, 0, 60, 0.1) 0%,
+        rgba(13, 13, 14, 0) 50%);
+    pointer-events: none;
+  }
+}
+
+.content {
+  .navigation {
+    a, span {
+      color: var(--cp-cyan);
+      text-shadow: 0 0 10px var(--cp-cyan);
+      transition: all 0.3s ease;
+      
+      &:hover {
+        color: var(--cp-yellow);
+        text-shadow: 0 0 15px var(--cp-yellow);
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  article {
+    background: rgba(13, 13, 14, 0.8);
+    border: 1px solid var(--cp-cyan);
+    box-shadow: 0 0 20px rgba(0, 255, 245, 0.1),
+                inset 0 0 20px rgba(0, 255, 245, 0.05);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    margin: 2rem 0;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, 
+        transparent 0%, 
+        var(--cp-cyan) 50%, 
+        transparent 100%);
+      animation: scanline 2s linear infinite;
+    }
+
+    h1 {
+      color: var(--cp-pink);
+      text-shadow: 0 0 20px var(--cp-pink);
+      animation: textFlicker 1.5s infinite alternate;
+    }
+
+    h2 {
+      color: var(--cp-cyan);
+      text-shadow: 0 0 15px var(--cp-cyan);
+    }
+
+    a {
+      color: var(--cp-cyan);
+      text-shadow: 0 0 5px var(--cp-cyan);
+      margin-right: 1rem;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border: 1px solid var(--cp-cyan);
+      border-radius: 4px;
+      transition: all 0.3s ease;
+      display: inline-block;
+      margin-bottom: 0.5rem;
+
+      &:hover {
+        background: var(--cp-cyan);
+        color: var(--cp-darker);
+        box-shadow: 0 0 20px var(--cp-cyan);
+        transform: translateY(-2px);
+      }
+
+      &::after {
+        display: none !important;
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100px;
+      height: 100%;
+      background: repeating-linear-gradient(
+        45deg,
+        var(--cp-yellow) 0,
+        var(--cp-yellow) 2px,
+        transparent 2px,
+        transparent 10px
+      );
+      opacity: 0.1;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      right: -2px;
+      width: 40px;
+      height: 40px;
+      background: 
+        linear-gradient(45deg, transparent 50%, var(--cp-yellow) 50%);
+      opacity: 0.8;
+    }
+  }
+}
+
+a {
+  color: var(--cp-cyan);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+@keyframes textFlicker {
+  0% {
+    text-shadow: 0 0 20px var(--cp-pink);
+  }
+  100% {
+    text-shadow: 0 0 25px var(--cp-pink),
+                 0 0 45px var(--cp-pink);
+  }
+}
+
+@keyframes borderFlicker {
+  0% {
+    border-color: var(--cp-cyan);
+    box-shadow: 0 0 20px rgba(0, 255, 245, 0.2);
+  }
+  100% {
+    border-color: var(--cp-pink);
+    box-shadow: 0 0 30px rgba(255, 46, 136, 0.3);
+  }
+}
+
+.project-card {
+  background: var(--cp-darker);
+  border: 1px solid var(--cp-cyan);
+  box-shadow: 0 0 20px rgba(0, 255, 245, 0.2);
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px rgba(255, 46, 136, 0.3);
+  border-color: var(--cp-pink);
+}
+
+.skill-progress .progress {
+  background: var(--cp-cyan);
+  box-shadow: 0 0 15px var(--cp-cyan);
+}
+
+/* Glitch effect for main title */
+.about h1 {
+  position: relative;
+  color: var(--cp-pink);
+  text-shadow: 0 0 20px var(--cp-pink);
+  animation: glitch 1s linear infinite;
+}
+
+@keyframes glitch {
+  2%, 64% {
+    transform: translate(2px,0) skew(0deg);
+  }
+  4%, 60% {
+    transform: translate(-2px,0) skew(0deg);
+  }
+  62% {
+    transform: translate(0,0) skew(5deg); 
+  }
+}
+
+.links-container {
+  display: flex;
+  gap: 1.5rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+  .neon-button {
+    min-width: 180px;
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+    
+    &:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 0 30px var(--cp-cyan);
+    }
+  }
+}
+
+.neon-button {
+  background: var(--cp-darker);
+  color: var(--cp-cyan);
+  padding: 0.8rem 1.5rem;
+  border: 1px solid var(--cp-cyan);
+  border-radius: 4px;
+  text-decoration: none !important;
+  transition: all 0.3s ease;
+  text-shadow: 0 0 5px var(--cp-cyan);
+  box-shadow: 0 0 10px rgba(0, 255, 245, 0.1);
+  display: inline-block;
+  min-width: 150px;
+  text-align: center;
+  
+  &:hover {
+    background: var(--cp-cyan);
+    color: var(--cp-darker);
+    box-shadow: 0 0 20px var(--cp-cyan);
+    transform: translateY(-2px);
+  }
+}
+
+a::after,
+a::before,
+a[href^="http"]::after,
+.content a::after,
+.neon-button::after {
+  display: none !important;
+  content: none !important;
+}
+
+.tech-box {
+  background: rgba(13, 13, 14, 0.8);
+  border: 1px solid var(--cp-cyan);
+  padding: 1.2rem;
+  margin: 1.5rem 0;
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, 
+      var(--cp-cyan) 0%, 
+      var(--cp-yellow) 50%, 
+      var(--cp-pink) 100%);
+    animation: scanline 2s linear infinite;
+  }
+  
+  .tech-stack, .role {
+    margin: 0.7rem 0;
+    font-size: 1.1rem;
+  }
+  
+  .neon-text {
+    color: var(--cp-pink);
+    text-shadow: 0 0 10px var(--cp-pink);
+    margin-right: 0.5rem;
+  }
+
+  &::after {
+    content: '⚡';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: var(--cp-yellow);
+    font-size: 1.2rem;
+    text-shadow: 0 0 10px var(--cp-yellow);
+  }
+}
+
+@keyframes scanline {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.content article {
+  margin-bottom: 3rem;
+  
+  h2 {
+    margin-top: 2.5rem;
+  }
+}
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  
+  li {
+    padding: 0.8rem 0;
+    text-align: center;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      color: var(--cp-pink);
+      text-shadow: 0 0 10px var(--cp-pink);
+      transform: scale(1.05);
+    }
+  }
+}
+
+.company-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--cp-cyan);
+  
+  .company-name {
+    color: var(--cp-pink);
+    text-shadow: 0 0 10px var(--cp-pink);
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  
+  .duration {
+    color: var(--cp-cyan);
+    text-shadow: 0 0 5px var(--cp-cyan);
+    font-style: italic;
+  }
+}
+
+.content article {
+  ul {
+    list-style-type: none;
+    padding-left: 1.5rem;
+    
+    li {
+      position: relative;
+      margin: 0.8rem 0;
+      
+      &:before {
+        content: '▹';
+        position: absolute;
+        left: -1.5rem;
+        color: var(--cp-pink);
+        text-shadow: 0 0 5px var(--cp-pink);
+      }
+      
+      &:hover {
+        color: var(--cp-cyan);
+        text-shadow: 0 0 5px var(--cp-cyan);
+        transform: translateX(5px);
+        transition: all 0.3s ease;
+      }
+    }
+  }
+  
+  h3 {
+    color: var(--cp-cyan);
+    text-shadow: 0 0 10px var(--cp-cyan);
+    margin-top: 2rem;
+  }
+}
+
+.location-info {
+  color: var(--cp-cyan);
+  text-shadow: 0 0 5px var(--cp-cyan);
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* Cyberpunk 2077 style headings */
+h1, h2, h3 {
+  font-family: "Rajdhani", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Links with CP2077 style */
+a {
+  color: var(--cp-cyan);
+  text-shadow: 0 0 5px var(--cp-cyan);
+  transition: all 0.3s ease;
+  position: relative;
+  text-decoration: none;
+  
+  &:hover {
+    color: var(--cp-yellow);
+    text-shadow: 0 0 10px var(--cp-yellow);
+    transform: translateX(5px);
+  }
+}
+
+/* Glitch effect for main titles */
+.glitch-text {
+  animation: glitch 1s linear infinite;
+  position: relative;
+  
+  &::before,
+  &::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    text-shadow: 0 0 5px var(--cp-cyan);
+  }
+  
+  &::before {
+    animation: glitch-top 1s linear infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+    transform: translate(-2px,-2px);
+  }
+  
+  &::after {
+    animation: glitch-bottom 1.5s linear infinite;
+    clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+    transform: translate(2px,2px);
+  }
+}
+
+/* CP2077 Menu Navigation */
+.navigation {
+  position: relative;
+  
+  a {
+    position: relative;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 2px;
+      height: 0;
+      background: var(--cp-yellow);
+      transition: height 0.3s ease;
+    }
+    
+    &:hover::before {
+      height: 100%;
+    }
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--cp-yellow);
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.3s ease;
+    }
+    
+    &:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+  }
+}
+
+/* CP2077 Glitch Effect for headings */
+h1, h2 {
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: attr(data-text);
+    position: absolute;
+    left: -2px;
+    text-shadow: 1px 0 var(--cp-red);
+    top: 0;
+    color: var(--cp-yellow);
+    overflow: hidden;
+    clip: rect(0, 900px, 0, 0);
+    animation: noise-anim-2 3s infinite linear alternate-reverse;
+  }
+  
+  &::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 2px;
+    text-shadow: -1px 0 var(--cp-cyan);
+    top: 0;
+    color: var(--cp-yellow);
+    overflow: hidden;
+    clip: rect(0, 900px, 0, 0);
+    animation: noise-anim 2s infinite linear alternate-reverse;
+  }
+}
+
+/* Add glitch animations */
+@keyframes noise-anim {
+  0% {
+    clip: rect(51px, 9999px, 28px, 0);
+  }
+  5% {
+    clip: rect(70px, 9999px, 19px, 0);
+  }
+  10% {
+    clip: rect(92px, 9999px, 13px, 0);
+  }
+  100% {
+    clip: rect(91px, 9999px, 83px, 0);
+  }
+}
+
+@keyframes noise-anim-2 {
+  0% {
+    clip: rect(33px, 9999px, 144px, 0);
+  }
+  5% {
+    clip: rect(150px, 9999px, 69px, 0);
+  }
+  10% {
+    clip: rect(99px, 9999px, 77px, 0);
+  }
+  100% {
+    clip: rect(43px, 9999px, 27px, 0);
+  }
+} 

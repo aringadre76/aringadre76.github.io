@@ -1,0 +1,67 @@
+baseURL = "https://aringadre76.github.io/"
+title = "Arin Gadre"
+theme = "hugo-coder"
+languageCode = "en"
+defaultContentLanguage = "en"
+paginate = 20
+enableEmoji = true
+
+[params]
+author = "Arin Gadre"
+info = "⚡ Full Stack Engineer | 🤖 ML Researcher | 🌐 UCSC Student"
+description = "Building the future, one line of code at a time"
+keywords = "cyberpunk,developer,engineer,portfolio,ML,software"
+dateFormat = "January 2, 2006"
+since = 2023
+colorScheme = "dark"
+hideColorSchemeToggle = false
+customSCSS = ["scss/custom/_cyberpunk.scss"]
+
+# Social links
+[[params.social]]
+name = "Email"
+icon = "fa fa-envelope fa-2x"
+weight = 1
+url = "mailto:aringadre@gmail.com"
+target = "_self"
+
+[[params.social]]
+name = "Github"
+icon = "fa fa-github fa-2x"
+weight = 2
+url = "https://github.com/aringadre76"
+target = "_blank"
+rel = "noopener noreferrer"
+
+[[params.social]]
+name = "LinkedIn"
+icon = "fa fa-linkedin fa-2x"
+weight = 3
+url = "https://www.linkedin.com/in/arin-gadre/"
+target = "_blank"
+rel = "noopener noreferrer"
+
+# Menu links
+[[menu.main]]
+name = "About"
+weight = 1
+url = "about/"
+
+[[menu.main]]
+name = "Projects"
+weight = 2
+url = "projects/"
+
+[[menu.main]]
+name = "Experience"
+weight = 3
+url = "experience/"
+
+[[menu.main]]
+name = "Contact"
+weight = 4
+url = "contact/"
+
+[params.style]
+primaryColor = "#ff2e88"
+secondaryColor = "#00fff5" 
