@@ -10,7 +10,7 @@ Got some tech to discuss, jobs to collaborate on, or opportunities to explore? L
 
 ## 📡 Contact Links
 
-* 📧 [Email](mailto:aringadre@gmail.com)
+* 📧 <a href="mailto:aringadre@gmail.com">Email</a>
 * 💼 [LinkedIn](https://linkedin.com/in/arin-gadre)
 * 🐱 [GitHub](https://github.com/aringadre76)
 
