@@ -1,6 +1,35 @@
-# Arin Gadre's Portfolio Website
+# 💫 Arin Gadre's Portfolio
 
-Welcome to my personal portfolio website! This platform showcases my projects, skills, experiences, and interests as a Computer Engineering student and aspiring software engineer.
+![Cyberpunk Theme](https://img.shields.io/badge/Theme-Cyberpunk-00fff5)
+![Hugo](https://img.shields.io/badge/Built%20with-Hugo-ff2e88)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+
+## 🌐 Overview
+
+Personal portfolio website showcasing my software engineering projects, skills, and experience. Built with Hugo and styled with a custom cyberpunk theme.
+
+## 🚀 Features
+
+- Responsive design
+- Cyberpunk-inspired UI/UX
+- Project showcase
+- Technical skills overview
+- Professional experience timeline
+
+## 🛠️ Tech Stack
+
+- **Framework**: Hugo
+- **Styling**: Custom SCSS
+- **Deployment**: GitHub Pages
+- **Theme**: Modified Hugo-Coder with Cyberpunk elements
+
+## 📝 License
+
+This project is open source and available under the MIT License.
+
+## 🔗 Live Site
+
+Visit the live site at [aringadre76.github.io](https://aringadre76.github.io)
 
 ## Website Features
 
@@ -8,7 +37,6 @@ Welcome to my personal portfolio website! This platform showcases my projects, s
 - **Technical Skills**: Overview of my programming languages, frameworks, and development practices.
 - **Experience**: Highlights of my professional journey, including significant contributions and achievements.
 - **Hobbies & Interests**: Personal passions like card magic and gaming, featuring my favorite games and hobbies.
-- **Responsive Design**: Fully optimized for desktop and mobile viewing.
 
 ## Technologies Used
 
@@ -16,11 +44,6 @@ Welcome to my personal portfolio website! This platform showcases my projects, s
 - **CSS**: Styling using modern and responsive design principles.
 - **JavaScript**: Interactivity and functionality enhancements.
 - **External Libraries**: FontAwesome for icons and responsiveness.
-
-## Visit the Website
-
-The website is live and accessible at:  
-👉 [https://aringadre76.github.io/](https://aringadre76.github.io/)
 
 ## Usage
 
@@ -37,7 +60,3 @@ If you'd like to connect, reach out via:
 - [LinkedIn](https://www.linkedin.com/in/arin-gadre/)
 - [GitHub](https://github.com/aringadre76)
 - Email: aringadre@gmail.com
-
-## License
-
-This project is open source and available under the [MIT License](LICENSE).
