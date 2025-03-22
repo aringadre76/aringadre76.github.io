@@ -3,19 +3,20 @@ title = "Arin Gadre"
 theme = "hugo-coder"
 languageCode = "en"
 defaultContentLanguage = "en"
-paginate = 20
-enableEmoji = true
 
+# Replace the old paginate with the new pagination config
+[pagination]
+  pagerSize = 20
+
+# Add markup configuration to allow raw HTML
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+# Add this to suppress the HTML warnings
 [params]
-author = "Arin Gadre"
-info = "⚡ Full Stack Engineer | 🤖 ML Researcher | 🌐 UCSC Student"
-description = "Building the future, one line of code at a time"
-keywords = "cyberpunk,developer,engineer,portfolio,ML,software"
-dateFormat = "January 2, 2006"
-since = 2023
-colorScheme = "dark"
-hideColorSchemeToggle = false
-customSCSS = ["scss/custom/_cyberpunk.scss"]
+  ignoreLogs = ['warning-goldmark-raw-html']
 
 # Social links
 [[params.social]]
