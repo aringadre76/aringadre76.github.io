@@ -294,18 +294,20 @@ a[href^="http"]::after,
   }
   
   .tech-stack, .role {
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-    line-height: 1.5;
+    font-size: 1.75rem !important;
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
     position: relative;
     z-index: 2;
+    font-weight: 600;
   }
   
   .neon-text {
     color: var(--cp-pink);
     font-weight: bold;
     text-shadow: 0 0 5px var(--cp-pink);
-    margin-right: 0.5rem;
+    margin-right: 0.8rem;
+    font-size: 1.85rem !important;
   }
 
   &::after {
