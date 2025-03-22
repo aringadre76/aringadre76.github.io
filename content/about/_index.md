@@ -11,6 +11,7 @@ draft: false
 **UC Santa Cruz** | GPA: 3.0
 - Expected Graduation: June 2025
 - B.S. Computer Engineering
+<a href="/resume.pdf" target="_blank" rel="noopener" class="neon-button">📄 View Resume</a>
 
 ### Core Coursework
 - Machine Learning & Deep Learning
