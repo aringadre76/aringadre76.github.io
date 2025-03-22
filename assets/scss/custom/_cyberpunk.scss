@@ -275,6 +275,8 @@ a[href^="http"]::after,
   border: 1px solid var(--cp-cyan);
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 255, 245, 0.2);
+  position: relative;
+  overflow: hidden;
   
   &::before {
     content: '';
@@ -288,12 +290,15 @@ a[href^="http"]::after,
       var(--cp-yellow) 50%, 
       var(--cp-pink) 100%);
     animation: scanline 2s linear infinite;
+    z-index: 1;
   }
   
   .tech-stack, .role {
     font-size: 1.1rem;
     margin-bottom: 0.5rem;
     line-height: 1.5;
+    position: relative;
+    z-index: 2;
   }
   
   .neon-text {
@@ -311,6 +316,7 @@ a[href^="http"]::after,
     color: var(--cp-yellow);
     font-size: 1.2rem;
     text-shadow: 0 0 10px var(--cp-yellow);
+    z-index: 2;
   }
 }
 
