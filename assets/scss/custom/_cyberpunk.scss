@@ -31,6 +31,18 @@ body {
         rgba(13, 13, 14, 0) 50%);
     pointer-events: none;
   }
+
+  &.colorscheme-light {
+    .header .logo {
+      color: var(--cp-darker) !important;
+    }
+  }
+  
+  &.colorscheme-dark {
+    .header .logo {
+      color: var(--cp-cyan) !important;
+    }
+  }
 }
 
 .content {
@@ -257,12 +269,12 @@ a[href^="http"]::after,
 }
 
 .tech-box {
-  background: rgba(13, 13, 14, 0.8);
-  border: 1px solid var(--cp-cyan);
+  margin: 1rem 0;
   padding: 1.2rem;
-  margin: 1.5rem 0;
-  position: relative;
-  overflow: hidden;
+  background-color: rgba(13, 13, 14, 0.8);
+  border: 1px solid var(--cp-cyan);
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 255, 245, 0.2);
   
   &::before {
     content: '';
@@ -279,13 +291,15 @@ a[href^="http"]::after,
   }
   
   .tech-stack, .role {
-    margin: 0.7rem 0;
     font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
   }
   
   .neon-text {
     color: var(--cp-pink);
-    text-shadow: 0 0 10px var(--cp-pink);
+    font-weight: bold;
+    text-shadow: 0 0 5px var(--cp-pink);
     margin-right: 0.5rem;
   }
 
@@ -337,23 +351,20 @@ a[href^="http"]::after,
 
 .company-info {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  margin: 1rem 0;
-  padding: 0.5rem 0;
-  border-bottom: 1px solid var(--cp-cyan);
+  margin-bottom: 1rem;
   
   .company-name {
-    color: var(--cp-pink);
-    text-shadow: 0 0 10px var(--cp-pink);
     font-size: 1.2rem;
-    font-weight: 500;
+    font-weight: bold;
+    color: var(--cp-cyan);
   }
   
   .duration {
-    color: var(--cp-cyan);
-    text-shadow: 0 0 5px var(--cp-cyan);
     font-style: italic;
+    color: var(--cp-yellow);
   }
 }
 

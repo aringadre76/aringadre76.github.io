@@ -8,10 +8,9 @@ draft: false
 
 ## Education
 
-**UC Santa Cruz** | GPA: 3.0
+**UC Santa Cruz**
 - Expected Graduation: June 2025
 - B.S. Computer Engineering
-<a href="/resume.pdf" target="_blank" rel="noopener" class="neon-button">📄 View Resume</a>
 
 ### Core Coursework
 - Machine Learning & Deep Learning
@@ -25,10 +24,10 @@ draft: false
 ## Technical Arsenal
 
 ### Languages
-Python, Java, C/C++, JavaScript, TypeScript, Dart, PHP, Verilog, SQL
+Python, Java, C/C++, JavaScript, TypeScript, Dart, PHP, Verilog, SQL, YAML
 
 ### Frameworks & Tools
-React, Laravel, Flutter, PyTorch, TensorFlow, Keras, Tailwind, Node.js, Express, MongoDB, MySQL
+React, Laravel, Flutter, PyTorch, TensorFlow, Keras, Tailwind, Node.js, Express, MongoDB, MySQL, Docker, Hugging Face, VLLM
 
 ### Development Skills
 SCRUM, Agile, API Integration, Unit Testing, Debugging, Git Version Control, Android Development 
