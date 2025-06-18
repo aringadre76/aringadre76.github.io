@@ -65,3 +65,7 @@ yarn.lock
 
 # 🌈 Custom Ignores
 # Add your project-specific ignores below *.deb
+
+/assets/Arin_Gadre_Resume.pdf
+/assets/Arin_Gadre_Resume.tex
+/assets/*.txt

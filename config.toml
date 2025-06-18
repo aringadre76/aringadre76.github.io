@@ -17,7 +17,7 @@ defaultContentLanguage = "en"
 # Unified params section
 [params]
   author = "Arin Gadre"
-  info = "⚡ Full Stack Engineer | 🤖 ML Researcher | 🌐 UCSC Student"
+  info = "Full Stack Engineer | UCSC Student"
   description = "Building the future, one line of code at a time"
   keywords = "cyberpunk,developer,engineer,portfolio,ML,software"
   dateFormat = "January 2, 2006"
