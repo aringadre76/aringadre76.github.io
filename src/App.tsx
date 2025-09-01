@@ -167,25 +167,12 @@ function AboutPage() {
   )
 }
 
+// Import projects data from JSON file
+import projectsData from './projects.json'
+
 // Projects Page Component
 function ProjectsPage() {
-  const projects = [
-    {
-      title: "AI Portfolio Assistant",
-      description: "Intelligent portfolio management system with natural language processing",
-      tech: "React, TypeScript, OpenAI API"
-    },
-    {
-      title: "WebGL Visualizations",
-      description: "Interactive 3D data visualizations using modern WebGL techniques",
-      tech: "Three.js, WebGL, GLSL"
-    },
-    {
-      title: "Real-time Analytics Dashboard",
-      description: "Live data dashboard with real-time updates and interactive charts",
-      tech: "React, Node.js, WebSockets"
-    }
-  ]
+  const projects = projectsData
 
   return (
     <div className="page">
@@ -193,7 +180,7 @@ function ProjectsPage() {
         <div className="section">
           <h1 className="section-title">Projects</h1>
           <div className="grid grid-3">
-            {projects.map((project) => (
+            {projects.map((project: any) => (
               <SimpleCard key={project.title}>
                 <h3 className="card-title">{project.title}</h3>
                 <p className="card-text">{project.description}</p>
@@ -249,7 +236,7 @@ function ContactPage() {
   const contactOptions = [
     {
       title: "Email",
-      value: "arin@example.com",
+      value: "aringadre@gmail.com",
       description: "Best way to reach me"
     },
     {

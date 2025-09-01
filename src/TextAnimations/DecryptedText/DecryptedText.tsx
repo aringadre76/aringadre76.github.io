@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from 'react';
-import type { ReactNode } from 'react';
+// import type { ReactNode } from 'react';
 import { motion, type HTMLMotionProps } from "framer-motion";
 
 const styles = {
