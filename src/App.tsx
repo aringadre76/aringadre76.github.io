@@ -124,9 +124,6 @@ function HomePage() {
             />
           </p>
           <div className="button-group">
-            <SimpleButton onClick={() => toast.success('Welcome to my portfolio!')}>
-              Get In Touch
-            </SimpleButton>
             <SimpleButton variant="secondary">
               View Projects
             </SimpleButton>
