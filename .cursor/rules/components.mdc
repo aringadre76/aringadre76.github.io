@@ -1,9 +1,6 @@
 ---
-description:
-globs:
-alwaysApply: true
+alwaysApply: false
 ---
-
 # 🚀 Absolutely Awesome React Components & Libraries
 
 This is a list of AWESOME components. Nope, it's NOT a comprehensive list of
