@@ -1,90 +1,77 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
-import './App.css';
-import About from './components/About';
-import Projects from './components/Projects';
-import Experience from './components/Experience';
-import Contact from './components/Contact';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
+import './App.css'
 
-const Navigation: React.FC = () => {
-  const location = useLocation();
-
-  const isActive = (path: string) => {
-    if (path === '/' && location.pathname === '/') return true;
-    if (path !== '/' && location.pathname.startsWith(path)) return true;
-    return false;
-  };
-
+function HomePage() {
   return (
-    <nav className="navigation">
-      <Link 
-        to="/" 
-        className={`nav-link ${isActive('/') ? 'active' : ''}`}
-      >
-        About
-      </Link>
-      <Link 
-        to="/projects" 
-        className={`nav-link ${isActive('/projects') ? 'active' : ''}`}
-      >
-        Projects
-      </Link>
-      <Link 
-        to="/experience" 
-        className={`nav-link ${isActive('/experience') ? 'active' : ''}`}
-      >
-        Experience
-      </Link>
-      <Link 
-        to="/contact" 
-        className={`nav-link ${isActive('/contact') ? 'active' : ''}`}
-      >
-        Contact
-      </Link>
-      <a 
-        href="/resume.pdf" 
-        target="_blank" 
-        rel="noopener noreferrer"
-        className="nav-link"
-      >
-        Resume
-      </a>
-    </nav>
-  );
-};
+    <div className="page">
+      <h1>Arin Gadre</h1>
+      <p>Full Stack Engineer | UCSC Student</p>
+      <p>Portfolio coming soon...</p>
+    </div>
+  )
+}
 
-const Header: React.FC = () => {
+function AboutPage() {
   return (
-    <header className="header">
-      <div className="container">
-        <h1 className="logo glitch-text" data-text="Arin Gadre">
-          Arin Gadre
-        </h1>
-        <p className="tagline">Full Stack Engineer | UCSC Student</p>
-      </div>
-    </header>
-  );
-};
+    <div className="page">
+      <h1>About</h1>
+      <p>About section coming soon...</p>
+    </div>
+  )
+}
 
-const App: React.FC = () => {
+function ProjectsPage() {
+  return (
+    <div className="page">
+      <h1>Projects</h1>
+      <p>Projects section coming soon...</p>
+    </div>
+  )
+}
+
+function ExperiencePage() {
+  return (
+    <div className="page">
+      <h1>Experience</h1>
+      <p>Experience section coming soon...</p>
+    </div>
+  )
+}
+
+function ContactPage() {
+  return (
+    <div className="page">
+      <h1>Contact</h1>
+      <p>Contact section coming soon...</p>
+    </div>
+  )
+}
+
+function App() {
   return (
     <Router>
-      <div className="cyberpunk-bg">
-        <Header />
-        <Navigation />
-        <main className="main-content">
-          <div className="container">
-            <Routes>
-              <Route path="/" element={<About />} />
-              <Route path="/projects" element={<Projects />} />
-              <Route path="/experience" element={<Experience />} />
-              <Route path="/contact" element={<Contact />} />
-            </Routes>
-          </div>
+      <div className="app">
+        <nav className="nav">
+          <Link to="/" className="nav-link">Home</Link>
+          <Link to="/about" className="nav-link">About</Link>
+          <Link to="/projects" className="nav-link">Projects</Link>
+          <Link to="/experience" className="nav-link">Experience</Link>
+          <Link to="/contact" className="nav-link">Contact</Link>
+          <a href="/resume.pdf" className="nav-link" target="_blank" rel="noopener noreferrer">Resume</a>
+        </nav>
+
+        <main className="main">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/projects" element={<ProjectsPage />} />
+            <Route path="/experience" element={<ExperiencePage />} />
+            <Route path="/contact" element={<ContactPage />} />
+          </Routes>
         </main>
       </div>
     </Router>
-  );
-};
+  )
+}
 
-export default App;
+export default App

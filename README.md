@@ -1,34 +1,44 @@
 # Arin Gadre - Portfolio Website
 
-A modern React-based portfolio website featuring a cyberpunk theme.
+A modern React portfolio website built with Vite and deployed on GitHub Pages.
 
-## 🚀 Features
-- Modern React with TypeScript
-- Cyberpunk-themed design with neon colors  
-- Responsive design for all devices
-- GitHub Pages deployment with Actions
-- Interactive project showcase
-- Professional experience timeline
+## 🚀 Tech Stack
+- **React 19** with TypeScript
+- **Vite** for fast development and builds
+- **React Router** for client-side routing
+- **GitHub Actions** for automated deployment
+- **GitHub Pages** for hosting
 
 ## 🛠️ Development
+
 ```bash
+# Install dependencies
 npm install
-npm start
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
 ```
 
 ## 📦 Deployment
-Automatically deployed to GitHub Pages via GitHub Actions on push to main.
 
-Manual deployment:
-```bash
-npm run deploy
-```
+The site automatically deploys to GitHub Pages when you push to the `main` branch via GitHub Actions.
 
-## 🎨 Theme
-Custom cyberpunk theme with:
-- Neon pink (#ff2e88) and cyan (#00fff5) accents
-- Dark background with gradient effects
-- Glitch text animations
-- Modern typography (Orbitron + Rajdhani fonts)
+## 🎯 Status
 
-Built with ❤️ using React and deployed on GitHub Pages.
+Currently a blank template with navigation structure ready for portfolio content.
+
+### Pages Structure
+- Home
+- About
+- Projects
+- Experience
+- Contact
+- Resume (PDF link)
+
+Built with ❤️ using React + Vite
