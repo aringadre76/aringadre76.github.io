@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, Link, useLocation, useNavigate } from 'react-router-dom'
 import React from 'react'
 import Aurora from './Backgrounds/Aurora/Aurora'
 import TextType from './TextAnimations/TextType/TextType'
@@ -8,48 +8,6 @@ import './App.css'
 
 // Import toast for notifications
 import toast, { Toaster } from 'react-hot-toast'
-
-// Enhanced Navigation Component with GooeyNav
-function Navigation() {
-  const location = useLocation()
-
-  const navItems = [
-    { label: 'Home', href: '/' },
-    { label: 'About', href: '/about' },
-    { label: 'Projects', href: '/projects' },
-    { label: 'Experience', href: '/experience' },
-    { label: 'Contact', href: '/contact' }
-  ]
-
-  const getCurrentActiveIndex = () => {
-    const currentPath = location.pathname
-    return navItems.findIndex(item => {
-      if (item.href === '/' && currentPath === '/') return true
-      if (item.href !== '/' && currentPath.startsWith(item.href)) return true
-      return false
-    })
-  }
-
-  return (
-    <nav className="nav">
-      <div className="nav-container">
-        <Link to="/" className="nav-brand">
-          Arin Gadre
-        </Link>
-        <div className="gooey-nav-wrapper">
-          <GooeyNavRouter 
-            items={navItems}
-            initialActiveIndex={getCurrentActiveIndex() >= 0 ? getCurrentActiveIndex() : 0}
-            animationTime={600}
-            particleCount={12}
-            particleDistances={[80, 15]}
-            colors={[1, 2, 3, 4]}
-          />
-        </div>
-      </div>
-    </nav>
-  )
-}
 
 // Simple Button Component
 function SimpleButton({ children, onClick, variant = 'primary' }: {
@@ -75,61 +33,6 @@ function SimpleCard({ children, className = "" }: {
   return (
     <div className={`card ${className}`}>
       {children}
-    </div>
-  )
-}
-
-// Home Page Component
-function HomePage() {
-  return (
-    <div className="page">
-      <div className="container">
-        <div className="hero">
-          <h1 className="hero-title">
-            <DecryptedText
-              text="Arin Gadre"
-              speed={80}
-              maxIterations={8}
-              sequential={true}
-              revealDirection="start"
-              animateOn="view"
-              useOriginalCharsOnly={true}
-            />
-          </h1>
-          <TextType
-            text={[
-              "Full Stack Developer",
-              "AI Engineer", 
-              "Creative Technologist",
-              "Problem Solver"
-            ]}
-            as="p"
-            className="hero-subtitle"
-            typingSpeed={60}
-            pauseDuration={2000}
-            deletingSpeed={40}
-            loop={true}
-            initialDelay={2000}
-            textColors={["#3b82f6", "#8b5cf6", "#06d6a0", "#f72585"]}
-          />
-          <p className="hero-description">
-            <DecryptedText
-              text="Building innovative solutions at the intersection of technology and human experience."
-              speed={60}
-              maxIterations={6}
-              sequential={true}
-              revealDirection="start"
-              animateOn="view"
-              useOriginalCharsOnly={true}
-            />
-          </p>
-          <div className="button-group">
-            <SimpleButton variant="secondary">
-              View Projects
-            </SimpleButton>
-          </div>
-        </div>
-      </div>
     </div>
   )
 }
@@ -308,6 +211,108 @@ function AuroraBackground() {
         speed={0.8}
       />
     </div>
+  )
+}
+
+// Home Page Component
+function HomePage() {
+  const navigate = useNavigate()
+
+  return (
+    <div className="page">
+      <div className="container">
+        <div className="hero">
+          <h1 className="hero-title">
+            <DecryptedText
+              text="Arin Gadre"
+              speed={80}
+              maxIterations={8}
+              sequential={true}
+              revealDirection="start"
+              animateOn="view"
+              useOriginalCharsOnly={true}
+            />
+          </h1>
+          <TextType
+            text={[
+              "Full Stack Developer",
+              "AI Engineer",
+              "Creative Technologist",
+              "Problem Solver"
+            ]}
+            as="p"
+            className="hero-subtitle"
+            typingSpeed={60}
+            pauseDuration={2000}
+            deletingSpeed={40}
+            loop={true}
+            initialDelay={2000}
+            textColors={["#3b82f6", "#8b5cf6", "#06d6a0", "#f72585"]}
+          />
+          <p className="hero-description">
+            <DecryptedText
+              text="Building innovative solutions at the intersection of technology and human experience."
+              speed={60}
+              maxIterations={6}
+              sequential={true}
+              revealDirection="start"
+              animateOn="view"
+              useOriginalCharsOnly={true}
+            />
+          </p>
+          <div className="button-group">
+            <SimpleButton onClick={() => navigate('/contact')}>
+              Get In Touch
+            </SimpleButton>
+            <SimpleButton variant="secondary" onClick={() => navigate('/projects')}>
+              View Projects
+            </SimpleButton>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+// Enhanced Navigation Component with GooeyNav
+function Navigation() {
+  const location = useLocation()
+
+  const navItems = [
+    { label: 'Home', href: '/' },
+    { label: 'About', href: '/about' },
+    { label: 'Projects', href: '/projects' },
+    { label: 'Experience', href: '/experience' },
+    { label: 'Contact', href: '/contact' }
+  ]
+
+  const getCurrentActiveIndex = () => {
+    const currentPath = location.pathname
+    return navItems.findIndex(item => {
+      if (item.href === '/' && currentPath === '/') return true
+      if (item.href !== '/' && currentPath.startsWith(item.href)) return true
+      return false
+    })
+  }
+
+  return (
+    <nav className="nav">
+      <div className="nav-container">
+        <Link to="/" className="nav-brand">
+          Arin Gadre
+        </Link>
+        <div className="gooey-nav-wrapper">
+          <GooeyNavRouter
+            items={navItems}
+            initialActiveIndex={getCurrentActiveIndex() >= 0 ? getCurrentActiveIndex() : 0}
+            animationTime={600}
+            particleCount={12}
+            particleDistances={[80, 15]}
+            colors={[1, 2, 3, 4]}
+          />
+        </div>
+      </div>
+    </nav>
   )
 }
 

@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import "./GooeyNav.css";
 
 interface GooeyNavItem {
@@ -34,6 +34,7 @@ const GooeyNavRouter: React.FC<GooeyNavRouterProps> = ({
   const textRef = useRef<HTMLSpanElement>(null);
   const [activeIndex, setActiveIndex] = useState<number>(initialActiveIndex);
   const navigate = useNavigate();
+  const location = useLocation();
 
   const noise = (n = 1) => n / 2 - Math.random() * n;
 
@@ -193,6 +194,20 @@ const GooeyNavRouter: React.FC<GooeyNavRouterProps> = ({
     resizeObserver.observe(containerRef.current);
     return () => resizeObserver.disconnect();
   }, [activeIndex]);
+
+  // Update active index when location changes
+  useEffect(() => {
+    const currentPath = location.pathname;
+    const newActiveIndex = items.findIndex(item => {
+      if (item.href === '/' && currentPath === '/') return true;
+      if (item.href !== '/' && currentPath.startsWith(item.href)) return true;
+      return false;
+    });
+    
+    if (newActiveIndex !== -1 && newActiveIndex !== activeIndex) {
+      setActiveIndex(newActiveIndex);
+    }
+  }, [location.pathname, items, activeIndex]);
 
   return (
     <div className="gooey-nav-container" ref={containerRef}>
