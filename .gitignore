@@ -27,3 +27,40 @@ dist-ssr
 cursor
 .cursor
 cache
+
+# Environment files
+.env
+.env.local
+.env.*
+
+# Coverage and test outputs
+coverage/
+.nyc_output/
+
+# Build / tool caches
+.eslintcache
+.parcel-cache/
+.turbo/
+.vite/
+
+# Lockfiles
+package-lock.json
+yarn.lock
+
+## TypeScript build info
+*.tsbuildinfo
+node_modules/.tmp/
+
+# Playwright artifacts / screenshots
+.playwright-report/
+.playwright/
+.playwright-mcp/
+
+# Editor/session history
+.history/
+
+# Local caches
+.cache/
+
+# ReactBits.dev configuration (not needed for deployment)
+jsrepo.json

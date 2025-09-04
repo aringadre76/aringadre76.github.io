@@ -264,9 +264,10 @@ body {
   transition: var(--transition);
   height: 100%;
   width: 100%;
-  max-width: 400px;
+  max-width: 800px;
+  max-height: 70vh;
   position: relative;
-  overflow: hidden;
+  overflow: auto;
 }
 
 .card::before {
@@ -302,6 +303,12 @@ body {
   color: var(--text-secondary);
   line-height: 1.6;
   font-size: 0.95rem;
+}
+
+.card-text {
+  line-height: 1.9;
+  font-size: 1rem;
+  margin-bottom: 1rem;
 }
 
 /* Buttons */
@@ -364,6 +371,17 @@ body {
 .grid-3 {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   justify-content: center;
+}
+
+/* Single-column project list */
+.grid-list {
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  align-items: stretch;
+}
+.grid-list .card {
+  width: 100%;
+  max-width: 100%;
 }
 
 /* Section */
