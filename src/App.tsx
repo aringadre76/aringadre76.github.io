@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, Link, useLocation, useNavigate } from 'react-router-dom'
 import React from 'react'
-import Aurora from './Backgrounds/Aurora/Aurora'
+import Prism from './Backgrounds/Prism/Prism'
 import TextType from './TextAnimations/TextType/TextType'
 import DecryptedText from './TextAnimations/DecryptedText/DecryptedText'
 import GooeyNavRouter from './Components/GooeyNav/GooeyNavRouter'
@@ -371,27 +371,6 @@ function ResumePage() {
   )
 }
 
-// Aurora Background Component
-function AuroraBackground() {
-  return (
-    <div style={{ 
-      width: '100%', 
-      height: '100vh', 
-      position: 'fixed', 
-      top: 0, 
-      left: 0, 
-      zIndex: 0,
-      pointerEvents: 'none'
-    }}>
-      <Aurora
-        colorStops={["#1a1a1a", "#3b82f6", "#8b5cf6"]}
-        amplitude={1.2}
-        blend={0.6}
-        speed={0.8}
-      />
-    </div>
-  )
-}
 
 // Home Page Component
 function HomePage() {
@@ -501,7 +480,27 @@ function App() {
     <Router>
       <Toaster position="bottom-right" reverseOrder={false} />
       <div className="app">
-        <AuroraBackground />
+        <div style={{
+          width: '100%',
+          height: '100vh',
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          zIndex: 0,
+          pointerEvents: 'none'
+        }}>
+          <Prism
+            animationType="hover"
+            timeScale={0.5}
+            scale={3.6}
+            height={3.5}
+            baseWidth={5.5}
+            noise={0}
+            glow={1}
+            hueShift={0}
+            colorFrequency={1}
+          />
+        </div>
         <Navigation />
         <main className="main">
           <Routes>
