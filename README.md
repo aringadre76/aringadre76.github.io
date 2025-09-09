@@ -1,6 +1,6 @@
 # Arin Gadre - Portfolio Website
 
-A modern React portfolio website built with Vite and deployed on GitHub Pages.
+just my portfolio website code, check it out if you wanna ;) 
 
 ## 🚀 Tech Stack
 - **React 19** with TypeScript
@@ -8,6 +8,7 @@ A modern React portfolio website built with Vite and deployed on GitHub Pages.
 - **React Router** for client-side routing
 - **GitHub Actions** for automated deployment
 - **GitHub Pages** for hosting
+- **ReactBits.dev** components for animations and effects
 
 ## 🛠️ Development
 
@@ -29,16 +30,26 @@ npm run preview
 
 The site automatically deploys to GitHub Pages when you push to the `main` branch via GitHub Actions.
 
+## 🎨 Components & Animations
+
+This portfolio features beautiful animated components from [ReactBits.dev](https://reactbits.dev):
+- **Prism Background** - Interactive 3D rotating prism with hover effects
+- **TextType** - Dynamic typing animation for hero text
+- **DecryptedText** - Matrix-style text reveal effects
+- **GooeyNav** - Smooth navigation with particle effects
+- **ElectricBorder** - Animated electric border effects
+
+Check out [ReactBits.dev](https://reactbits.dev) for more amazing React components and animations!
+
 ## 🎯 Status
 
-Currently a blank template with navigation structure ready for portfolio content.
+Modern portfolio website with interactive animations and smooth user experience.
 
 ### Pages Structure
-- Home
-- About
-- Projects
-- Experience
-- Contact
-- Resume (PDF link)
+- **Home** - Hero section with animated text and background
+- **About** - Personal introduction with animated cards
+- **Projects** - Showcase of development work with interactive elements
+- **Experience** - Professional experience timeline
+- **Contact** - Contact information with animated cards
+- **Resume** - PDF download (coming soon)
 
-Built with ❤️ using React + Vite
