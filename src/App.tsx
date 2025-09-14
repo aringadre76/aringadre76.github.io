@@ -435,6 +435,19 @@ function HomePage() {
 // Enhanced Navigation Component with GooeyNav
 function Navigation() {
   const location = useLocation()
+  const [menuOpen, setMenuOpen] = React.useState(false)
+  const [isMobile, setIsMobile] = React.useState(false)
+
+  React.useEffect(() => {
+    const onResize = () => {
+      const mobile = window.innerWidth <= 768
+      setIsMobile(mobile)
+      if (!mobile) setMenuOpen(false)
+    }
+    onResize()
+    window.addEventListener('resize', onResize)
+    return () => window.removeEventListener('resize', onResize)
+  }, [])
 
   const navItems = [
     { label: 'Home', href: '/' },
@@ -459,16 +472,43 @@ function Navigation() {
         <Link to="/" className="nav-brand">
           Arin Gadre
         </Link>
-        <div className="gooey-nav-wrapper">
-          <GooeyNavRouter
-            items={navItems}
-            initialActiveIndex={getCurrentActiveIndex() >= 0 ? getCurrentActiveIndex() : 0}
-            animationTime={600}
-            particleCount={12}
-            particleDistances={[80, 15]}
-            colors={[1, 2, 3, 4]}
-          />
-        </div>
+        {isMobile ? (
+          <>
+            <button
+              className="mobile-menu-toggle"
+              aria-label="Toggle navigation menu"
+              aria-expanded={menuOpen}
+              onClick={() => setMenuOpen(v => !v)}
+            >
+              ☰
+            </button>
+            {menuOpen && (
+              <div className="mobile-menu">
+                {navItems.map(item => (
+                  <Link
+                    key={item.label}
+                    to={item.href}
+                    className={`mobile-menu-item${location.pathname.startsWith(item.href) && (item.href === '/' ? location.pathname === '/' : true) ? ' active' : ''}`}
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </>
+        ) : (
+          <div className="gooey-nav-wrapper">
+            <GooeyNavRouter
+              items={navItems}
+              initialActiveIndex={getCurrentActiveIndex() >= 0 ? getCurrentActiveIndex() : 0}
+              animationTime={450}
+              particleCount={6}
+              particleDistances={[50, 12]}
+              colors={[1, 2, 3, 4]}
+            />
+          </div>
+        )}
       </div>
     </nav>
   )
