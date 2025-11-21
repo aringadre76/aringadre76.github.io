@@ -12,7 +12,7 @@ import TextType from "./TextAnimations/TextType/TextType";
 import DecryptedText from "./TextAnimations/DecryptedText/DecryptedText";
 import GooeyNavRouter from "./Components/GooeyNav/GooeyNavRouter";
 import ElectricBorder from "./Animations/ElectricBorder/ElectricBorder";
-import NotFound from "./NotFound";
+import NotFound from "./NotFound.tsx";
 import "./App.css";
 
 // Import toast for notifications
