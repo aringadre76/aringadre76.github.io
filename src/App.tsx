@@ -7,7 +7,7 @@ import {
   useNavigate,
 } from "react-router-dom";
 import React from "react";
-import Aurora from "./Backgrounds/Aurora/Aurora";
+import LightPillar from "./Backgrounds/LightPillar/LightPillar";
 import TextType from "./TextAnimations/TextType/TextType";
 import DecryptedText from "./TextAnimations/DecryptedText/DecryptedText";
 import GooeyNavRouter from "./Components/GooeyNav/GooeyNavRouter";
@@ -643,7 +643,7 @@ function App() {
             pointerEvents: "none",
           }}
         >
-          <Aurora />
+          <LightPillar pillarRotation={45} />
         </div>
         <Navigation />
         <main className="main">
