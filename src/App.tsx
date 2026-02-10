@@ -192,6 +192,21 @@ const projectsData = [
     ],
   },
   {
+    title: "Satisfactory Game Data API",
+    description: `A REST API built with FastAPI that parses Satisfactory game descriptor files and serves structured data for items, recipes, buildings, miners, belts, transportation systems, and resource nodes. Includes filtering, search, production calculation endpoints, and auto-generated interactive Swagger/ReDoc documentation. Designed for factory planners, calculators, and automation scripts.`,
+    tech: "Python, FastAPI, Uvicorn, REST API, JSON",
+    links: [
+      {
+        label: "GitHub",
+        url: "https://github.com/aringadre76/satisfactory-api",
+      },
+      {
+        label: "Demo",
+        url: "",
+      },
+    ],
+  },
+  {
     title: "Austere Browser",
     description: `Privacy-first, memory-efficient Chromium fork with aggressive bloat removal. Built on Ungoogled-Chromium with extensive component stripping (Safe Browsing, Sync, Translate, DRM, and dozens more), configurable memory management levels (30s to 1hr tab discard thresholds), reduced V8 heap limits (128MB vs 2GB), parallel downloading, enhanced privacy defaults (all telemetry disabled, third-party cookies blocked, WebRTC leak protection), and tab memory usage tooltips. Achieves ~84% memory reduction vs Chrome with 10 tabs open.`,
     tech: "C++, Chromium, GN Build, Python, Bash, Linux",
