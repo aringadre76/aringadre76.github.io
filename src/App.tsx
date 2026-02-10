@@ -248,6 +248,17 @@ const projectsData = [
       },
     ],
   },
+  {
+    title: "Austere Browser",
+    description: `Privacy-first, memory-efficient Chromium fork with aggressive bloat removal. Built on Ungoogled-Chromium with extensive component stripping (Safe Browsing, Sync, Translate, DRM, and dozens more), configurable memory management levels (30s to 1hr tab discard thresholds), reduced V8 heap limits (128MB vs 2GB), parallel downloading, enhanced privacy defaults (all telemetry disabled, third-party cookies blocked, WebRTC leak protection), and tab memory usage tooltips. Achieves ~84% memory reduction vs Chrome with 10 tabs open.`,
+    tech: "C++, Chromium, GN Build, Python, Bash, Linux",
+    links: [
+      {
+        label: "GitHub",
+        url: "https://github.com/aringadre76/austere-browser",
+      },
+    ],
+  },
 ];
 
 // Helper to render project links (supports single `link` or multiple `links`)
