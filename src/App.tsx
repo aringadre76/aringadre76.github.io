@@ -104,6 +104,21 @@ function AboutPage() {
 
 const projectsData = [
   {
+    title: "PinPlace",
+    description: `A collaborative mapping web app where users create shareable maps and others add location pins in real-time. Features auto-lock, CSV/KML export, and Firebase-backed real-time sync.`,
+    tech: "React, TypeScript, Vite, Tailwind CSS, Leaflet, Firebase, React Router",
+    links: [
+      {
+        label: "GitHub",
+        url: "https://github.com/aringadre76/pinplace",
+      },
+      {
+        label: "Demo",
+        url: "https://pinplace.vercel.app/",
+      },
+    ],
+  },
+  {
     title: "Baseball Stats MCP Server",
     description: `Production-ready MCP (Model Context Protocol) server exposing 32 tools for comprehensive baseball analytics: traditional stats, Statcast metrics, pitch/batted-ball breakdowns, visualizations and comparisons. Integrates MLB & Statcast data, provides Plotly visualizations, and includes a robust test suite (~78% tools passing in docs).`,
     tech: "Python, MCP, Async IO, Data Visualization",
