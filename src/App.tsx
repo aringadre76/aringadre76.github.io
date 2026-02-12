@@ -207,6 +207,21 @@ const projectsData = [
     ],
   },
   {
+    title: "HabitTracker",
+    description: `A React app for tracking habits with a calendar view.`,
+    tech: "React, Vite",
+    links: [
+      {
+        label: "GitHub",
+        url: "https://github.com/aringadre76/habit-tracker/",
+      },
+      {
+        label: "Demo",
+        url: "https://habit-tracker.vercel.app/",
+      }
+    ],
+  },
+  {
     title: "Satisfactory Game Data API",
     description: `A REST API built with FastAPI that parses Satisfactory game descriptor files and serves structured data for items, recipes, buildings, miners, belts, transportation systems, and resource nodes. Includes filtering, search, production calculation endpoints, and auto-generated interactive Swagger/ReDoc documentation. Designed for factory planners, calculators, and automation scripts.`,
     tech: "Python, FastAPI, Uvicorn, REST API, JSON",
