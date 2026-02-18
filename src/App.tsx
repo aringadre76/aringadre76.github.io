@@ -104,21 +104,6 @@ function AboutPage() {
 
 const projectsData = [
   {
-    title: "SleepTracker",
-    description: `A React app for tracking sleep with a calendar view.`,
-    tech: "React, Vite",
-    links: [
-      {
-        label: "GitHub",
-        url: "https://github.com/yourusername/sleeptracker/",
-      },
-      {
-        label: "Demo",
-        url: "https://sleeptracker.yourdomain.com/",
-      },
-    ],
-  },
-  {
     title: "PinPlace",
     description: `A collaborative mapping web app where users create shareable maps and others add location pins in real-time. Features auto-lock, CSV/KML export, and Firebase-backed real-time sync.`,
     tech: "React, TypeScript, Vite, Tailwind CSS, Leaflet, Firebase, React Router",
@@ -233,21 +218,6 @@ const projectsData = [
       {
         label: "Demo",
         url: "https://habit-tracker.vercel.app/",
-      }
-    ],
-  },
-  {
-    title: "FitnessTracker",
-    description: `A small React app for tracking fitness.`,
-    tech: "React, Vite",
-    links: [
-      {
-        label: "GitHub",
-        url: "https://github.com/yourusername/FitnessTracker/",
-      },
-      {
-        label: "Demo",
-        url: "https://fitnesstracker.yourdomain.com/",
       }
     ],
   },
