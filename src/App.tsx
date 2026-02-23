@@ -7,7 +7,7 @@ import {
   useNavigate,
 } from "react-router-dom";
 import React from "react";
-import LightPillar from "./Backgrounds/LightPillar/LightPillar";
+import PixelSnow from "./component/PixelSnow";
 import TextType from "./TextAnimations/TextType/TextType";
 import DecryptedText from "./TextAnimations/DecryptedText/DecryptedText";
 import GooeyNavRouter from "./Components/GooeyNav/GooeyNavRouter";
@@ -699,7 +699,7 @@ function App() {
             pointerEvents: "none",
           }}
         >
-          <LightPillar pillarRotation={45} />
+          <PixelSnow color="#e8e6e9" speed={5} pixelResolution={200} brightness={2} />
         </div>
         <Navigation />
         <main className="main">
