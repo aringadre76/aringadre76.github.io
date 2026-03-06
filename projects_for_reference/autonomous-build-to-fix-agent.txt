@@ -1,0 +1,97 @@
+autonomous-build-to-fix-agent
+
+## Links
+- GitHub: https://github.com/aringadre76/autonomous-build-to-fix-agent
+
+## README
+
+📄 PRD 1 — Autonomous Build-to-Fix Agent
+1. Problem Statement
+
+Game studios lose significant time and money to build/test failures caused by regressions, flaky tests, and environment mismatches. Current AI QA tools only detect or report issues — they don’t autonomously fix them and return a working build. Developers waste hours per week debugging trivial failures.
+
+2. Goals & Objectives
+
+Reduce average build failure resolution time by 70%+.
+
+Autonomously detect, fix, and propose pull requests for broken builds.
+
+Integrate seamlessly with existing CI/CD pipelines (GitHub Actions, GitLab CI).
+
+Always provide auditable, human-readable explanations of fixes.
+
+3. Non-Goals
+
+Not replacing human judgment for large design/feature-level bugs.
+
+Not shipping automerges in v1 (human review required).
+
+Not supporting all engines initially — focus on Unity first, then Unreal.
+
+4. Core Features
+
+CI Integration
+
+GitHub/GitLab webhook listener for build/test failures.
+
+Error log ingestion + structured parsing.
+
+Autonomous Fix Agent
+
+LLM-driven code editor proposes fixes.
+
+Creates sandbox branch for testing.
+
+Iterates up to N attempts until tests/builds pass.
+
+Validation
+
+Runs failing test suite or build again.
+
+Confirms fixed before PR creation.
+
+Pull Request Generation
+
+Includes changed files, new/updated tests.
+
+Human-readable explanation of root cause & fix.
+
+Links to build/test logs.
+
+Dashboard / Slack Integration (v2)
+
+Notifies devs with PR link & summary.
+
+Metrics on failure frequency & agent success rate.
+
+5. User Stories
+
+As a Unity developer, I want an AI agent that automatically proposes a fix when my CI build fails, so I don’t waste hours debugging logs.
+
+As a tech lead, I want visibility into agent-authored PRs and explanations, so I can safely review and merge.
+
+6. Success Metrics
+
+% of build/test failures resolved without human code edits.
+
+Mean time to fix (MTTR) reduction.
+
+PR acceptance rate by humans.
+
+7. Tech Stack
+
+Engines: Unity (C#), later Unreal (C++/Blueprint).
+
+Infrastructure: GitHub App / GitLab Webhooks, Dockerized Unity builds.
+
+AI: LLM (e.g., GPT-5 / fine-tuned local model), AST-based code modification.
+
+Sandbox: containerized test runner with resource limits.
+
+8. Risks & Constraints
+
+False positives / unsafe fixes (must gate behind human approval).
+
+Unity license & headless CI setup complexity.
+
+Needs robust error log parsing across platforms.

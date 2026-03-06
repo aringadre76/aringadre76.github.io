@@ -1,0 +1,120 @@
+amazon-link-cleaner
+
+## Links
+- GitHub: https://github.com/aringadre76/amazon-link-cleaner
+
+## README
+
+# Amazon Link Cleaner
+
+A simple and efficient tool for cleaning Amazon product links by removing tracking parameters and affiliate tags.
+
+## Features
+
+- **Clean Amazon Links**: Removes all tracking parameters and affiliate tags from Amazon product URLs
+- **URL Shortener**: Creates short URLs for cleaned Amazon links
+- **Direct URL Cleaning**: Similar to "fxtwitter", visit `/amazon.com/...` to get a cleaned version instantly
+- **Full URL Path Support**: Visit `/https://www.amazon.com/...` to clean a full URL
+- **API Endpoint**: Use the `/api/create` endpoint to programmatically create short clean links
+- **Browser Bookmarklet**: Easily clean Amazon links while browsing (see below)
+- **Regional Support**: Works with all major Amazon domains (com, co.uk, de, etc.)
+- **Short Link Support**: Also works with Amazon short links (a.co, amzn.to)
+
+## Quick Start
+
+1. Clone this repository:
+   ```
+   git clone https://github.com/yourusername/amazon-link-cleaner.git
+   cd amazon-link-cleaner
+   ```
+
+2. Install the required dependencies:
+   ```
+   pip install -r requirements.txt
+   ```
+
+3. Run the server:
+   ```
+   python short_server.py --port 8000
+   ```
+
+4. Use the cleaner:
+   - Visit `http://localhost:8000/amazon.com/dp/ASIN?tag=affiliate-20` to clean links
+   - Or use `http://localhost:8000/https://www.amazon.com/dp/ASIN?tag=affiliate-20`
+   - Or use the API: `curl -X POST "http://localhost:8000/api/create" -H "Content-Type: application/json" -d '{"url":"https://www.amazon.com/dp/ASIN?tag=affiliate-20"}'`
+
+## Usage Examples
+
+### Command-line Usage
+
+```
+# Clean a URL directly
+python amazon_link_cleaner.py "https://www.amazon.com/dp/B0CMWJSQMB?tag=affiliate-20"
+
+# Run tests with sample URLs
+python amazon_link_cleaner.py --test
+```
+
+### Server Usage
+
+The server provides three ways to clean Amazon links:
+
+1. **Direct URL Cleaning**:
+   ```
+   http://localhost:8000/amazon.com/dp/B0CMWJSQMB?tag=affiliate-20
+   ```
+
+2. **Full URL Path**:
+   ```
+   http://localhost:8000/https://www.amazon.com/dp/B0CMWJSQMB?tag=affiliate-20
+   ```
+
+3. **API Endpoint for Short URL Creation**:
+   ```
+   curl -X POST "http://localhost:8000/api/create" -H "Content-Type: application/json" -d '{"url":"https://www.amazon.com/dp/B0CMWJSQMB?tag=affiliate-20"}'
+   ```
+
+## Browser Bookmarklet
+
+Create a bookmarklet to clean Amazon links with a single click:
+
+```javascript
+javascript:(function(){var url=window.location.href;window.location.href='http://localhost:8000/'+url;})();
+```
+
+To use:
+1. Create a new bookmark in your browser
+2. Name it "Clean Amazon Link"
+3. Paste the above code as the URL
+4. Click the bookmark when viewing an Amazon product page
+
+## How It Works
+
+The Amazon Link Cleaner works by:
+
+1. Extracting the Amazon Standard Identification Number (ASIN) from the URL
+2. Detecting which Amazon region the URL is from (com, co.uk, etc.)
+3. Creating a clean URL in the format `https://www.amazon.{region}/dp/{ASIN}`
+4. For short links (a.co, amzn.to), the original short format is preserved
+
+## Deployment
+
+For production deployment:
+
+1. Update the `--base-url` parameter to your domain:
+   ```
+   python short_server.py --port 80 --base-url https://your-domain.com/
+   ```
+
+2. Consider using Docker:
+   ```
+   docker-compose up -d
+   ```
+
+## License
+
+MIT License
+
+## Acknowledgements
+
+This project was inspired by similar URL cleaners like fxtwitter/vxtwitter.
