@@ -1,8 +1,0 @@
-selfhosted
-
-## Links
-- GitHub: https://github.com/aringadre76/selfhosted
-
-## README
-
-_No README found on GitHub._

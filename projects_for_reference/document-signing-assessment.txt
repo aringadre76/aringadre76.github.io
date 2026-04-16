@@ -1,8 +1,0 @@
-document-signing-assessment
-
-## Links
-- GitHub: https://github.com/aringadre76/document-signing-assessment
-
-## README
-
-_No README found on GitHub._
