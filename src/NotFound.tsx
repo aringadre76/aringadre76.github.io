@@ -1,23 +1,20 @@
-import { Link } from 'react-router-dom';
-import './NotFound.css';
+import { Link } from "react-router-dom";
+import { Reveal } from "./components/ui";
 
-function NotFound() {
+export default function NotFound() {
   return (
-    <div className="not-found-container">
-      <div className="not-found-content">
-        <h1 className="not-found-title">404</h1>
-        <h2 className="not-found-subtitle">Page Not Found</h2>
-        <p className="not-found-text">
-          Oops! The page you're looking for doesn't exist.
+    <section className="page not-found">
+      <Reveal>
+        <pre className="nf-code" aria-hidden="true">{`$ resolve "/…"
+error: no such file or directory`}</pre>
+        <h1 className="nf-title">404</h1>
+        <p className="nf-text">
+          The path you requested doesn’t exist on this host.
         </p>
-        <Link to="/" className="not-found-link">
-          <button className="not-found-button">
-            Go Back Home
-          </button>
+        <Link className="btn" to="/">
+          [ cd ~ ]
         </Link>
-      </div>
-    </div>
+      </Reveal>
+    </section>
   );
 }
-
-export default NotFound;
